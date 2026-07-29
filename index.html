@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amortization Schedule Calculator — Full Payment Table | Tabutility</title>
+  <meta name="description" content="Generate a full amortization schedule for any loan. See every monthly payment broken down into principal and interest. Free amortization calculator — instant results."/>
+  <link rel="canonical" href="https://amortization-schedule.tabutility.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://amortization-schedule.tabutility.com/"/>
+  <meta property="og:title" content="Amortization Schedule Calculator — Full Payment Table"/>
+  <meta property="og:description" content="Generate a full amortization schedule. See every monthly payment broken down into principal and interest."/>
+  <meta property="og:site_name" content="Tabutility"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>"/>
+  <meta name="theme-color" content="#1a1a2e"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Amortization Schedule Calculator","url":"https://amortization-schedule.tabutility.com/","description":"Generate a full amortization schedule showing every monthly payment broken down into principal and interest.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+    a{color:#4f46e5;text-decoration:none}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800}
+    .nav-links a{color:rgba(255,255,255,0.8);font-size:14px;margin-left:20px;font-weight:500}
+    .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero h1{font-size:clamp(24px,4vw,38px);font-weight:900;margin:0 0 10px}
+    .hero p{color:rgba(255,255,255,0.75);margin:0;font-size:16px}
+    .wrap{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+    .card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;border:1.5px solid #e8ecf2}
+    .card h2{font-size:18px;font-weight:800;margin:0 0 20px}
+    .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    @media(max-width:600px){.row3{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.4px}
+    .prefix-wrap{position:relative}
+    .prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#64748b;font-weight:700;font-size:16px;pointer-events:none}
+    .suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#64748b;font-weight:700;font-size:16px;pointer-events:none}
+    input[type=number]{width:100%;padding:12px 14px 12px 32px;border:2px solid #e2e8f0;border-radius:10px;font-size:17px;font-weight:700;color:#1e293b;background:#f8fafc;outline:none;transition:border 0.2s}
+    input.no-pre{padding-left:14px;padding-right:32px}
+    input:focus{border-color:#4f46e5;background:#fff}
+    .summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+    @media(max-width:600px){.summary-grid{grid-template-columns:1fr 1fr}}
+    .sum-box{border-radius:12px;padding:16px;text-align:center}
+    .sum-box.blue{background:#eff6ff;border:1.5px solid #bfdbfe}
+    .sum-box.green{background:#f0fdf4;border:1.5px solid #bbf7d0}
+    .sum-box.orange{background:#fff7ed;border:1.5px solid #fed7aa}
+    .sum-box.purple{background:#faf5ff;border:1.5px solid #e9d5ff}
+    .sum-num{font-size:clamp(16px,3vw,22px);font-weight:900;color:#1e293b;line-height:1}
+    .sum-label{font-size:12px;color:#64748b;font-weight:600;margin-top:4px}
+    .table-wrap{overflow-x:auto;max-height:460px;overflow-y:auto;border-radius:10px;border:1.5px solid #e2e8f0}
+    table{width:100%;border-collapse:collapse;min-width:560px}
+    thead{position:sticky;top:0;background:#1a1a2e;color:#fff;z-index:1}
+    th{padding:12px 14px;text-align:right;font-size:13px;font-weight:700;letter-spacing:0.3px}
+    th:first-child{text-align:left}
+    td{padding:10px 14px;text-align:right;font-size:14px;border-bottom:1px solid #f1f5f9}
+    td:first-child{text-align:left;font-weight:700;color:#475569}
+    tr:nth-child(even) td{background:#f8fafc}
+    tr:last-child td{border-bottom:none;font-weight:700;background:#f0fdf4}
+    .bar{height:6px;border-radius:3px;background:#e2e8f0;margin-top:4px;overflow:hidden}
+    .bar-inner{height:100%;background:#4f46e5;border-radius:3px;transition:width 0.3s}
+    .ad-wrap{margin:20px 0;text-align:center;min-height:90px;background:#f8fafc;border-radius:8px}
+    footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:14px}
+    footer a{color:#818cf8}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+<div class="hero">
+  <h1>📊 Amortization Schedule</h1>
+  <p>See every monthly payment broken down into principal and interest</p>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>Loan Details</h2>
+    <div class="row3">
+      <div>
+        <label>Loan Amount</label>
+        <div class="prefix-wrap">
+          <span class="prefix">£</span>
+          <input type="number" id="principal" value="200000" min="1000" step="1000" oninput="calc()"/>
+        </div>
+      </div>
+      <div>
+        <label>Annual Interest Rate</label>
+        <div class="prefix-wrap">
+          <input type="number" id="rate" class="no-pre" value="4.5" min="0.1" max="30" step="0.1" oninput="calc()"/>
+          <span class="suffix">%</span>
+        </div>
+      </div>
+      <div>
+        <label>Loan Term (years)</label>
+        <div class="prefix-wrap">
+          <input type="number" id="term" class="no-pre" value="25" min="1" max="40" step="1" oninput="calc()"/>
+          <span class="suffix" style="right:8px">yrs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="summary-card" style="display:none">
+    <div class="summary-grid">
+      <div class="sum-box blue"><div class="sum-num" id="s-payment">—</div><div class="sum-label">Monthly payment</div></div>
+      <div class="sum-box purple"><div class="sum-num" id="s-total">—</div><div class="sum-label">Total repaid</div></div>
+      <div class="sum-box orange"><div class="sum-num" id="s-interest">—</div><div class="sum-label">Total interest</div></div>
+      <div class="sum-box green"><div class="sum-num" id="s-rate">—</div><div class="sum-label">Effective rate</div></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+        </thead>
+        <tbody id="schedule-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+<footer>
+  <p>© 2025 <a href="https://tabutility.com">Tabutility</a> — Free Online Tools</p>
+</footer>
+<script>
+  function calc(){
+    const P=parseFloat(document.getElementById('principal').value)||200000;
+    const r=parseFloat(document.getElementById('rate').value)/100/12;
+    const n=parseInt(document.getElementById('term').value)*12;
+    if(!P||!r||!n) return;
+
+    const monthly=P*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+    const totalPaid=monthly*n;
+    const totalInterest=totalPaid-P;
+
+    document.getElementById('s-payment').textContent='£'+fmt(monthly);
+    document.getElementById('s-total').textContent='£'+fmtK(totalPaid);
+    document.getElementById('s-interest').textContent='£'+fmtK(totalInterest);
+    document.getElementById('s-rate').textContent=(parseFloat(document.getElementById('rate').value))+'% p.a.';
+
+    const tbody=document.getElementById('schedule-body');
+    tbody.innerHTML='';
+    let balance=P;
+    for(let i=1;i<=n;i++){
+      const interest=balance*r;
+      const principal=monthly-interest;
+      balance-=principal;
+      if(balance<0) balance=0;
+      const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${i}</td><td>£${fmt(monthly)}</td><td>£${fmt(principal)}</td><td>£${fmt(interest)}</td><td>£${fmt(Math.max(0,balance))}</td>`;
+      tbody.appendChild(tr);
+    }
+    document.getElementById('summary-card').style.display='block';
+  }
+
+  function fmt(n){return parseFloat(n.toFixed(2)).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function fmtK(n){if(n>=10000)return (n/1000).toFixed(1)+'k';return fmt(n);}
+  calc();
+</script>
+</body>
+</html>
