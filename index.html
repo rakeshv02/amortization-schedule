@@ -68,6 +68,7 @@
     footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:14px}
     footer a{color:#818cf8}
   </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an amortization schedule?","acceptedAnswer":{"@type":"Answer","text":"An amortization schedule is a table showing each loan payment over the full term, split into interest and principal, along with the remaining balance after every payment. It lets you see exactly how a loan is paid down month by month. This tool builds the schedule automatically from your loan amount, rate, and term."}},{"@type":"Question","name":"Why is most of my early payment going to interest?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged on the outstanding balance, which is at its highest at the start of the loan, so early payments are mostly interest. As the principal shrinks, the interest portion falls and more of each fixed payment reduces the balance. This is why extra payments early on save the most interest."}},{"@type":"Question","name":"How is the monthly loan payment calculated?","acceptedAnswer":{"@type":"Answer","text":"The fixed monthly payment uses the standard amortization formula based on the loan amount, the monthly interest rate, and the total number of payments. It is set so the balance reaches exactly zero on the final payment. Changing the rate or term recalculates the payment instantly above."}},{"@type":"Question","name":"Does making extra payments change the schedule?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any extra payment goes straight to principal, which lowers future interest and shortens the loan term. Because interest is front-loaded, extra payments made early have the biggest impact on total interest saved. Check with your lender that overpayments are allowed without penalty."}}]}</script>
 </head>
 <body>
 <nav>
@@ -123,6 +124,32 @@
         </thead>
         <tbody id="schedule-body"></tbody>
       </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How an Amortization Schedule Works</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 10px">An amortization schedule breaks every loan payment into two parts: interest charged on the current balance, and principal that reduces what you owe. Early payments are mostly interest because the balance is high; as the balance falls, more of each payment goes to principal. The monthly payment stays the same, but its split shifts over the term.</p>
+    <p style="font-size:14px;color:#475569;margin:0">The fixed payment is found with the standard formula M = P × [ r(1+r)^n ] ÷ [ (1+r)^n − 1 ], where P is the loan amount, r is the monthly interest rate, and n is the number of payments. For example, a £200,000 loan at 4.5% over 25 years works out to roughly £1,112 per month.</p>
+  </div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">What is an amortization schedule?</h3>
+      <p style="font-size:14px;color:#475569;margin:0">An amortization schedule is a table showing each loan payment over the full term, split into interest and principal, along with the remaining balance after every payment. It lets you see exactly how a loan is paid down month by month. This tool builds the schedule automatically from your loan amount, rate, and term.</p>
+    </div>
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">Why is most of my early payment going to interest?</h3>
+      <p style="font-size:14px;color:#475569;margin:0">Interest is charged on the outstanding balance, which is at its highest at the start of the loan, so early payments are mostly interest. As the principal shrinks, the interest portion falls and more of each fixed payment reduces the balance. This is why extra payments early on save the most interest.</p>
+    </div>
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">How is the monthly loan payment calculated?</h3>
+      <p style="font-size:14px;color:#475569;margin:0">The fixed monthly payment uses the standard amortization formula based on the loan amount, the monthly interest rate, and the total number of payments. It is set so the balance reaches exactly zero on the final payment. Changing the rate or term recalculates the payment instantly above.</p>
+    </div>
+    <div>
+      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">Does making extra payments change the schedule?</h3>
+      <p style="font-size:14px;color:#475569;margin:0">Yes. Any extra payment goes straight to principal, which lowers future interest and shortens the loan term. Because interest is front-loaded, extra payments made early have the biggest impact on total interest saved. Check with your lender that overpayments are allowed without penalty.</p>
     </div>
   </div>
 
