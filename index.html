@@ -7,6 +7,7 @@
 <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
   <title>Amortization Schedule Calculator — Full Payment Table | Tabutility</title>
   <meta name="description" content="Generate a full amortization schedule for any loan. See every monthly payment broken down into principal and interest. Free amortization calculator — instant results."/>
   <link rel="canonical" href="https://amortization-schedule.tabutility.com/"/>
@@ -24,7 +25,7 @@
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <style>
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#ffffff;line-height:1.6}
     a{color:#4f46e5;text-decoration:none}
     nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
     .nav-brand{color:#fff;font-size:18px;font-weight:800}
@@ -41,7 +42,7 @@
     .prefix-wrap{position:relative}
     .prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#64748b;font-weight:700;font-size:16px;pointer-events:none}
     .suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#64748b;font-weight:700;font-size:16px;pointer-events:none}
-    input[type=number]{width:100%;padding:12px 14px 12px 32px;border:2px solid #e2e8f0;border-radius:10px;font-size:17px;font-weight:700;color:#1e293b;background:#f8fafc;outline:none;transition:border 0.2s}
+    input[type=number]{width:100%;padding:12px 14px 12px 32px;border:2px solid #e2e8f0;border-radius:10px;font-size:17px;font-weight:700;color:#ffffff;background:#f8fafc;outline:none;transition:border 0.2s}
     input.no-pre{padding-left:14px;padding-right:32px}
     input:focus{border-color:#4f46e5;background:#fff}
     .summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
@@ -51,14 +52,14 @@
     .sum-box.green{background:#f0fdf4;border:1.5px solid #bbf7d0}
     .sum-box.orange{background:#fff7ed;border:1.5px solid #fed7aa}
     .sum-box.purple{background:#faf5ff;border:1.5px solid #e9d5ff}
-    .sum-num{font-size:clamp(16px,3vw,22px);font-weight:900;color:#1e293b;line-height:1}
+    .sum-num{font-size:clamp(16px,3vw,22px);font-weight:900;color:#ffffff;line-height:1}
     .sum-label{font-size:12px;color:#64748b;font-weight:600;margin-top:4px}
     .table-wrap{overflow-x:auto;max-height:460px;overflow-y:auto;border-radius:10px;border:1.5px solid #e2e8f0}
     table{width:100%;border-collapse:collapse;min-width:560px}
     thead{position:sticky;top:0;background:#1a1a2e;color:#fff;z-index:1}
     th{padding:12px 14px;text-align:right;font-size:13px;font-weight:700;letter-spacing:0.3px}
     th:first-child{text-align:left}
-    td{padding:10px 14px;text-align:right;font-size:14px;border-bottom:1px solid #f1f5f9}
+    td{padding:10px 14px;text-align:right;font-size:14px;border-bottom:1px solid #0f172a}
     td:first-child{text-align:left;font-weight:700;color:#475569}
     tr:nth-child(even) td{background:#f8fafc}
     tr:last-child td{border-bottom:none;font-weight:700;background:#f0fdf4}
@@ -69,6 +70,14 @@
     footer a{color:#818cf8}
   </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an amortization schedule?","acceptedAnswer":{"@type":"Answer","text":"An amortization schedule is a table showing each loan payment over the full term, split into interest and principal, along with the remaining balance after every payment. It lets you see exactly how a loan is paid down month by month. This tool builds the schedule automatically from your loan amount, rate, and term."}},{"@type":"Question","name":"Why is most of my early payment going to interest?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged on the outstanding balance, which is at its highest at the start of the loan, so early payments are mostly interest. As the principal shrinks, the interest portion falls and more of each fixed payment reduces the balance. This is why extra payments early on save the most interest."}},{"@type":"Question","name":"How is the monthly loan payment calculated?","acceptedAnswer":{"@type":"Answer","text":"The fixed monthly payment uses the standard amortization formula based on the loan amount, the monthly interest rate, and the total number of payments. It is set so the balance reaches exactly zero on the final payment. Changing the rate or term recalculates the payment instantly above."}},{"@type":"Question","name":"Does making extra payments change the schedule?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any extra payment goes straight to principal, which lowers future interest and shortens the loan term. Because interest is front-loaded, extra payments made early have the biggest impact on total interest saved. Check with your lender that overpayments are allowed without penalty."}}]}</script>
+<style id="tabutility-brand">
+/* empty ad slots: reserve space, no bordered box */
+.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe{visibility:hidden!important}
+ins.adsbygoogle[data-ad-status="filled"],.ad-banner ins[data-ad-status="filled"] iframe,.ad-slot ins[data-ad-status="filled"] iframe{visibility:visible!important}
+nav .brand{color:#0f172a}
+body{-webkit-font-smoothing:antialiased}
+</style>
 </head>
 <body>
 <nav>
@@ -136,19 +145,19 @@
   <div class="card">
     <h2>Frequently Asked Questions</h2>
     <div style="margin-bottom:16px">
-      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">What is an amortization schedule?</h3>
+      <h3 style="font-size:15px;font-weight:700;color:#ffffff;margin:0 0 6px">What is an amortization schedule?</h3>
       <p style="font-size:14px;color:#475569;margin:0">An amortization schedule is a table showing each loan payment over the full term, split into interest and principal, along with the remaining balance after every payment. It lets you see exactly how a loan is paid down month by month. This tool builds the schedule automatically from your loan amount, rate, and term.</p>
     </div>
     <div style="margin-bottom:16px">
-      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">Why is most of my early payment going to interest?</h3>
+      <h3 style="font-size:15px;font-weight:700;color:#ffffff;margin:0 0 6px">Why is most of my early payment going to interest?</h3>
       <p style="font-size:14px;color:#475569;margin:0">Interest is charged on the outstanding balance, which is at its highest at the start of the loan, so early payments are mostly interest. As the principal shrinks, the interest portion falls and more of each fixed payment reduces the balance. This is why extra payments early on save the most interest.</p>
     </div>
     <div style="margin-bottom:16px">
-      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">How is the monthly loan payment calculated?</h3>
+      <h3 style="font-size:15px;font-weight:700;color:#ffffff;margin:0 0 6px">How is the monthly loan payment calculated?</h3>
       <p style="font-size:14px;color:#475569;margin:0">The fixed monthly payment uses the standard amortization formula based on the loan amount, the monthly interest rate, and the total number of payments. It is set so the balance reaches exactly zero on the final payment. Changing the rate or term recalculates the payment instantly above.</p>
     </div>
     <div>
-      <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 6px">Does making extra payments change the schedule?</h3>
+      <h3 style="font-size:15px;font-weight:700;color:#ffffff;margin:0 0 6px">Does making extra payments change the schedule?</h3>
       <p style="font-size:14px;color:#475569;margin:0">Yes. Any extra payment goes straight to principal, which lowers future interest and shortens the loan term. Because interest is front-loaded, extra payments made early have the biggest impact on total interest saved. Check with your lender that overpayments are allowed without penalty.</p>
     </div>
   </div>
@@ -198,28 +207,28 @@
 </script>
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this Amortization Schedule to your website or blog for free — just paste this code:</p>
-  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://amortization-schedule.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Amortization Schedule by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://amortization-schedule.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Amortization Schedule by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://amortization-schedule.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Amortization Schedule&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=personal+finance+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Want to master your money?">
+<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.com/s?k=personal+finance+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Want to master your money?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Want to master your money?</div>
-    <div style="font-size:12px;color:#94a3b8">Browse personal finance books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Want to master your money?</div>
+    <div style="font-size:12px;color:#64748b">Browse personal finance books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
 <div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-  <a href="https://date-difference-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Days Between Dates Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
-  <a href="https://percentage-change-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Change Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
-  <a href="https://split-bill-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Split Bill Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
-  <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
+  <a href="https://date-difference-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Days Between Dates Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
+  <a href="https://percentage-change-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Percentage Change Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
+  <a href="https://split-bill-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Split Bill Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
+  <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Percentage Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
 </div>
 </body>
 </html>
